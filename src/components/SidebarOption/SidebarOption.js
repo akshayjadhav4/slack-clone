@@ -29,7 +29,7 @@ function SidebarOption({ Icon, title, id, addChannelOption }) {
         <h3>{title}</h3>
       ) : (
         <h3 className="sidebarOption__channel">
-          <spna className="sidebarOption__hash">#</spna> {title}
+          <span className="sidebarOption__hash">#</span> {title}
         </h3>
       )}
     </div>
