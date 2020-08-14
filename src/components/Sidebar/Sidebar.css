@@ -50,3 +50,17 @@
   margin-bottom: 10px;
   border: 1px solid #49274b;
 }
+
+.sidebar__channels {
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+.sidebar__channels::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar__channels {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
