@@ -47,3 +47,7 @@
   margin-left: auto;
   margin-right: 20px;
 }
+
+.header__rightLogout {
+  cursor: pointer;
+}
