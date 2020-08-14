@@ -20,3 +20,7 @@
 .chatInput > form > button {
   display: none !important;
 }
+
+.chat__messagesScroll {
+  height: 70vh;
+}

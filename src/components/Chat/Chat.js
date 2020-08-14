@@ -6,6 +6,7 @@ import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import db from "../../config/firebase";
 import Message from "../Message/Message";
 import ChatInput from "../ChatInput/ChatInput";
+import ScrollToBottom from "react-scroll-to-bottom";
 function Chat() {
   const { roomId } = useParams();
   const [roomDetails, setRoomDetails] = useState(null);
@@ -40,17 +41,22 @@ function Chat() {
           </p>
         </div>
       </div>
-      <div className="chat__messages">
-        {roomMessages.map(({ message, timestamp, user, userImage }, index) => (
-          <Message
-            key={index}
-            message={message}
-            timestamp={timestamp}
-            user={user}
-            userImage={userImage}
-          />
-        ))}
-      </div>
+      <ScrollToBottom className="chat__messagesScroll">
+        <div className="chat__messages">
+          {roomMessages.map(
+            ({ message, timestamp, user, userImage }, index) => (
+              <Message
+                key={index}
+                message={message}
+                timestamp={timestamp}
+                user={user}
+                userImage={userImage}
+              />
+            )
+          )}
+        </div>
+      </ScrollToBottom>
+
       <ChatInput channelName={roomDetails?.name} channelId={roomId} />
     </div>
   );
