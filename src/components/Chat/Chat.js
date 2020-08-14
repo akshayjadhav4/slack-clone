@@ -42,6 +42,7 @@ function Chat() {
       <div className="chat__messages">
         {roomMessages.map(({ message, timestamp, user, userImage }, index) => (
           <Message
+            key={index}
             message={message}
             timestamp={timestamp}
             user={user}
