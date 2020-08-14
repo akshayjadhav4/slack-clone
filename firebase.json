@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "slack-clone",
     "public": "build",
     "ignore": [
       "firebase.json",
